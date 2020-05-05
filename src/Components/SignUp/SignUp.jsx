@@ -25,7 +25,7 @@ const LoginForm = () => (
           />
 
           <Button color="teal" fluid size="large">
-            Login
+            Sign Up
           </Button>
         </Segment>
       </Form>
