@@ -1,3 +1,6 @@
+# Tourism Kata
+[Demo Site](http://tourism-kata.nilliofy.com/)
+
 ## Project Brief
 Develop a simple web app in React Javascript that shows local tours taking place in Melbourne. The overall design of the web app is for you to determine using the semantic ui found below.
 
