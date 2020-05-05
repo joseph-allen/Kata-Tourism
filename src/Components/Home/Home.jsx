@@ -12,6 +12,7 @@ import {
   Sidebar,
   Visibility,
 } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 
 const getWidth = () => {
   const isSSR = typeof window === "undefined";
@@ -85,24 +86,30 @@ class DesktopContainer extends Component {
               size="large"
             >
               <Container>
-                <Menu.Item as="a" active>
-                  Home
-                </Menu.Item>
-                <Menu.Item as="a"> Tours </Menu.Item>
+                <Link to="/">
+                  <Menu.Item as="a"> Home </Menu.Item>
+                </Link>
+                <Link to="/tours">
+                  <Menu.Item as="a"> Tours </Menu.Item>
+                </Link>
                 <Menu.Item position="right">
-                  <Button as="a" inverted={!fixed}>
-                    Log in
-                  </Button>
-                  <Button
-                    as="a"
-                    inverted={!fixed}
-                    primary={fixed}
-                    style={{
-                      marginLeft: "0.5em",
-                    }}
-                  >
-                    Sign Up
-                  </Button>
+                  <Link to="/login">
+                    <Button as="a" inverted={!fixed}>
+                      Log in
+                    </Button>
+                  </Link>
+                  <Link to="/signUp">
+                    <Button
+                      as="a"
+                      inverted={!fixed}
+                      primary={fixed}
+                      style={{
+                        marginLeft: "0.5em",
+                      }}
+                    >
+                      Sign Up
+                    </Button>
+                  </Link>
                 </Menu.Item>
               </Container>
             </Menu>
@@ -150,13 +157,20 @@ class MobileContainer extends Component {
           vertical
           visible={sidebarOpened}
         >
-          <Menu.Item as="a" active>
-            Home
-          </Menu.Item>
-          <Menu.Item as="a"> Home </Menu.Item>
-          <Menu.Item as="a"> Tours </Menu.Item>
-          <Menu.Item as="a"> Log in </Menu.Item>
-          <Menu.Item as="a"> Sign Up </Menu.Item>
+          <Link to="/">
+            <Menu.Item as="a" active>
+              Home
+            </Menu.Item>
+          </Link>
+          <Link to="/tours">
+            <Menu.Item as="a"> Tours </Menu.Item>
+          </Link>
+          <Link to="/login">
+            <Menu.Item as="a"> Log in </Menu.Item>
+          </Link>
+          <Link to="/signUp">
+            <Menu.Item as="a"> Sign Up </Menu.Item>
+          </Link>
         </Sidebar>
         <Sidebar.Pusher dimmed={sidebarOpened}>
           <Segment
