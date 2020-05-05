@@ -5,6 +5,8 @@
 
 [Example Review Process](https://github.com/joseph-allen/Kata-Tourism/pull/18)
 
+[Nice Commit Messages](https://github.com/joseph-allen/Kata-Tourism/commits/master)
+
 Deploy History:
 [React Walking Skeleton](https://deploy-preview-20--tourism-kata.netlify.app/)
 
