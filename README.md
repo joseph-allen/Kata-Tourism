@@ -1,5 +1,37 @@
 # Tourism Kata
 [Demo Site](https://tourism-kata.netlify.app/)
+[Project Board](https://github.com/joseph-allen/Kata-Tourism/projects/1)
+[Example Review Process](https://github.com/joseph-allen/Kata-Tourism/pull/18)
+This project builds and deploys using Netlify.
+
+# Installation
+Yarn version: 1.17.3
+Node version: v12.8.0
+
+## Node
+Node is a JavaScript runtime. Install Node [here](https://nodejs.org/en/download/releases/)
+
+## Yarn
+Yarn is a package manager for Node. You will need to install version `1.17.3` of yarn on your computer. Install Yarn [Here](https://classic.yarnpkg.com/en/docs/install/#mac-stable)
+
+## Run locally
+### `yarn start`
+
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
+
+### `yarn build`
+
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ## Project Brief
 Develop a simple web app in React Javascript that shows local tours taking place in Melbourne. The overall design of the web app is for you to determine using the semantic ui found below.
@@ -32,12 +64,3 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
