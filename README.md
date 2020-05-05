@@ -7,7 +7,7 @@
 
 [Nice Commit Messages](https://github.com/joseph-allen/Kata-Tourism/commits/master)
 
-# Deploy History:
+# Deploy History
 [React Walking Skeleton](https://deploy-preview-20--tourism-kata.netlify.app/)
 
 [Semantic UI Demo](https://deploy-preview-21--tourism-kata.netlify.app/)
