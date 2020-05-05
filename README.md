@@ -12,11 +12,13 @@
 
 [Semantic UI Demo](https://deploy-preview-21--tourism-kata.netlify.app/)
 
-This project builds and deploys using Netlify.
 
 # Installation
 Yarn version: 1.17.3
+
 Node version: v12.8.0
+
+This project builds and deploys using Netlify.
 
 ## Node
 Node is a JavaScript runtime. Install Node [here](https://nodejs.org/en/download/releases/)
