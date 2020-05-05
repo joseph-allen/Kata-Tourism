@@ -1,7 +1,15 @@
 # Tourism Kata
 [Demo Site](https://tourism-kata.netlify.app/)
+
 [Project Board](https://github.com/joseph-allen/Kata-Tourism/projects/1)
+
 [Example Review Process](https://github.com/joseph-allen/Kata-Tourism/pull/18)
+
+Deploy History:
+[React Walking Skeleton](https://deploy-preview-20--tourism-kata.netlify.app/)
+
+[Semantic UI Demo](https://deploy-preview-21--tourism-kata.netlify.app/)
+
 This project builds and deploys using Netlify.
 
 # Installation
