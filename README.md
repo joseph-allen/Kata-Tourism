@@ -16,6 +16,8 @@
 
 [Basic Home Page](https://deploy-preview-23--tourism-kata.netlify.app/)
 
+[Basic Login & Signup Page](https://deploy-preview-24--tourism-kata.netlify.app/)
+
 # Installation
 
 Yarn version: 1.17.3
