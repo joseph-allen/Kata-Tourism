@@ -11,7 +11,10 @@ import {
   Segment,
   Sidebar,
   Visibility,
+  Image,
 } from "semantic-ui-react";
+import { Link } from "react-router-dom";
+import logo from "../../images/logo.png";
 
 const getWidth = () => {
   const isSSR = typeof window === "undefined";
@@ -19,18 +22,24 @@ const getWidth = () => {
   return isSSR ? Responsive.onlyTablet.minWidth : window.innerWidth;
 };
 const HomepageHeading = ({ mobile }) => (
-  <Container text>
+  <Container
+    text
+    style={{
+      backgroundImage: { logo },
+    }}
+  >
     <Header
       as="h1"
       content="Koala Tours"
       inverted
       style={{
-        fontSize: mobile ? "2em" : "4em",
+        fontSize: mobile ? "1.5em" : "3em",
         fontWeight: "normal",
         marginBottom: 0,
         marginTop: mobile ? "1.5em" : "3em",
       }}
     />
+    <Image src={logo} style={{ width: "300px", margin: "0 auto" }} />
     <Header
       as="h2"
       content="See Melbourne"
@@ -41,7 +50,7 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? "0.5em" : "1.5em",
       }}
     />
-    <Button primary size="huge">
+    <Button size="huge" color="teal">
       Search <Icon name="right arrow" />
     </Button>
   </Container>
@@ -85,24 +94,37 @@ class DesktopContainer extends Component {
               size="large"
             >
               <Container>
-                <Menu.Item as="a" active>
-                  Home
-                </Menu.Item>
-                <Menu.Item as="a"> Tours </Menu.Item>
+                <Link to="/">
+                  <Menu.Item as="a" color="teal">
+                    {" "}
+                    Home{" "}
+                  </Menu.Item>
+                </Link>
+                <Link to="/tours">
+                  <Menu.Item as="a" color="teal">
+                    {" "}
+                    Tours{" "}
+                  </Menu.Item>
+                </Link>
                 <Menu.Item position="right">
-                  <Button as="a" inverted={!fixed}>
-                    Log in
-                  </Button>
-                  <Button
-                    as="a"
-                    inverted={!fixed}
-                    primary={fixed}
-                    style={{
-                      marginLeft: "0.5em",
-                    }}
-                  >
-                    Sign Up
-                  </Button>
+                  <Link to="/login">
+                    <Button as="a" inverted={!fixed} color="teal">
+                      Log in
+                    </Button>
+                  </Link>
+                  <Link to="/signUp">
+                    <Button
+                      as="a"
+                      inverted={!fixed}
+                      primary={fixed}
+                      color="teal"
+                      style={{
+                        marginLeft: "0.5em",
+                      }}
+                    >
+                      Sign Up
+                    </Button>
+                  </Link>
                 </Menu.Item>
               </Container>
             </Menu>
@@ -150,16 +172,24 @@ class MobileContainer extends Component {
           vertical
           visible={sidebarOpened}
         >
-          <Menu.Item as="a" active>
-            Home
-          </Menu.Item>
-          <Menu.Item as="a"> Home </Menu.Item>
-          <Menu.Item as="a"> Tours </Menu.Item>
-          <Menu.Item as="a"> Log in </Menu.Item>
-          <Menu.Item as="a"> Sign Up </Menu.Item>
+          <Link to="/">
+            <Menu.Item as="a" active>
+              Home
+            </Menu.Item>
+          </Link>
+          <Link to="/tours">
+            <Menu.Item as="a"> Tours </Menu.Item>
+          </Link>
+          <Link to="/login">
+            <Menu.Item as="a"> Log in </Menu.Item>
+          </Link>
+          <Link to="/signUp">
+            <Menu.Item as="a"> Sign Up </Menu.Item>
+          </Link>
         </Sidebar>
         <Sidebar.Pusher dimmed={sidebarOpened}>
           <Segment
+            color="teal"
             inverted
             textAlign="center"
             style={{
@@ -224,6 +254,7 @@ const HomepageLayout = () => (
       <Container text>
         <Header
           as="h3"
+          color="teal"
           style={{
             fontSize: "2em",
           }}
