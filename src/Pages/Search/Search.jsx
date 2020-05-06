@@ -7,12 +7,18 @@ import { Input } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 class Search extends React.Component {
-  state = {
-    min: 0,
-    max: 1000,
-    searchTerm: "",
-    data: [],
-  };
+  constructor() {
+    super();
+
+    this.state = {
+      min: 0,
+      max: 1000,
+      searchTerm: "",
+      data: [],
+    };
+
+    this.getResultsWithinSearch = this.getResultsWithinSearch.bind(this);
+  }
 
   componentWillMount() {
     this.renderMyData();
@@ -55,6 +61,16 @@ class Search extends React.Component {
     });
   }
 
+  getResultsWithinRange(results) {
+    // return results within min and max
+  }
+
+  getResultsWithinSearch(result) {
+    const searchTerm = this.state.searchTerm;
+    // return results within search, and convert to lowercase
+    return result.name.toLowerCase().includes(searchTerm.toLowerCase());
+  }
+
   render() {
     return (
       <div>
@@ -85,9 +101,7 @@ class Search extends React.Component {
                 {this.state.data
                   .filter((result) => result.price.amount > this.state.min)
                   .filter((result) => result.price.amount < this.state.max)
-                  .filter((result) =>
-                    result.name.includes(this.state.searchTerm)
-                  )
+                  .filter(this.getResultsWithinSearch)
                   .map((result) => (
                     <Tour
                       name={result.name}
