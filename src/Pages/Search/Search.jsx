@@ -18,6 +18,7 @@ class Search extends React.Component {
     };
 
     this.getResultsWithinSearch = this.getResultsWithinSearch.bind(this);
+    this.getResultsWithinRange = this.getResultsWithinRange.bind(this);
   }
 
   componentWillMount() {
@@ -61,8 +62,12 @@ class Search extends React.Component {
     });
   }
 
-  getResultsWithinRange(results) {
+  getResultsWithinRange(result) {
     // return results within min and max
+    return (
+      parseFloat(result.price.amount) > this.state.min &&
+      parseFloat(result.price.amount) <= this.state.max
+    );
   }
 
   getResultsWithinSearch(result) {
@@ -99,8 +104,7 @@ class Search extends React.Component {
               </Grid.Column>
               <Grid.Column width={8}>
                 {this.state.data
-                  .filter((result) => result.price.amount > this.state.min)
-                  .filter((result) => result.price.amount < this.state.max)
+                  .filter(this.getResultsWithinRange)
                   .filter(this.getResultsWithinSearch)
                   .map((result) => (
                     <Tour
