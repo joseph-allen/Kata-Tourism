@@ -5,8 +5,28 @@ import logo from "../../images/logo.png";
 import SearchBar from "../SearchBar/SearchBar.jsx";
 import Tour from "../Tour/Tour.jsx";
 import dummy from "./dummy.json";
+import { Input } from "semantic-ui-react";
 
 class Search extends React.Component {
+  state = {
+    min: 0,
+    max: Math.max(
+      ...dummy.results.map((result) => parseFloat(result.price.amount))
+    ),
+  };
+
+  handleChangeMinInput(event) {
+    this.setState({
+      min: event.target.value,
+    });
+  }
+
+  handleChangeMaxInput(event) {
+    this.setState({
+      max: event.target.value,
+    });
+  }
+
   render() {
     return (
       <div>
@@ -17,15 +37,28 @@ class Search extends React.Component {
             </Header>
             <SearchBar style={{ margin: "0 auto" }} />
             <Grid padded columns={2}>
-              <Grid.Column width={4}>Filters</Grid.Column>
+              <Grid.Column width={4}>
+                Filters
+                <Input
+                  value={this.state.min}
+                  onChange={this.handleChangeMinInput.bind(this)}
+                />
+                <Input
+                  value={this.state.max}
+                  onChange={this.handleChangeMaxInput.bind(this)}
+                />
+              </Grid.Column>
               <Grid.Column width={8}>
-                {dummy.results.map((result) => (
-                  <Tour
-                    name={result.name}
-                    price={result.price.amount}
-                    intro={result.intro}
-                  />
-                ))}
+                {dummy.results
+                  .filter((result) => result.price.amount > this.state.min)
+                  .filter((result) => result.price.amount < this.state.max)
+                  .map((result) => (
+                    <Tour
+                      name={result.name}
+                      price={result.price.amount}
+                      intro={result.intro}
+                    />
+                  ))}
               </Grid.Column>
             </Grid>
           </Grid.Column>
