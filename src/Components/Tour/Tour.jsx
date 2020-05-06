@@ -21,7 +21,7 @@ const Tour = (props) => (
         </Card.Content>
         <Card.Content extra>
           <Icon name="user" />
-          {props.intro.charCodeAt(0);} Attendees
+          {props.intro.charCodeAt(0)} Attendees
         </Card.Content>
       </Card>
     </Grid>
