@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
-import Home from "./Components/Home/Home.jsx";
-import Login from "./Components/Login/Login.jsx";
-import Search from "./Components/Search/Search.jsx";
+import Home from "./Pages/Home/Home.jsx";
+import Login from "./Pages/Login/Login.jsx";
+import Search from "./Pages/Search/Search.jsx";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {

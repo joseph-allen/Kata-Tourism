@@ -2,7 +2,7 @@
 import React from "react";
 import { Grid, Header, Image } from "semantic-ui-react";
 import logo from "../../images/logo.png";
-import Tour from "../Tour/Tour.jsx";
+import Tour from "../../Components/Tour/Tour.jsx";
 import dummy from "./dummy.json";
 import { Input } from "semantic-ui-react";
 import { Link } from "react-router-dom";
