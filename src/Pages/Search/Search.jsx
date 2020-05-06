@@ -3,18 +3,39 @@ import React from "react";
 import { Grid, Header, Image } from "semantic-ui-react";
 import logo from "../../images/logo.png";
 import Tour from "../../Components/Tour/Tour.jsx";
-import dummy from "./dummy.json";
 import { Input } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 class Search extends React.Component {
   state = {
     min: 0,
-    max: Math.max(
-      ...dummy.results.map((result) => parseFloat(result.price.amount))
-    ),
+    max: 1000,
     searchTerm: "",
+    data: [],
   };
+
+  componentWillMount() {
+    this.renderMyData();
+  }
+
+  renderMyData() {
+    fetch(
+      "https://www.triposo.com/api/20200405/tour.json?location_ids=Melbourne&count=10&fields=name,price,intro&order_by=-score",
+      {
+        headers: {
+          "X-Triposo-Account": "ZX1UJ378",
+          "X-Triposo-Token": "f4xiu4hclcnu7coye4eorxb1o67vtcpp",
+        },
+      }
+    )
+      .then((response) => response.json())
+      .then((responseJson) => {
+        this.setState({ data: responseJson.results });
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
 
   handleChangeSearch(event) {
     this.setState({
@@ -61,7 +82,7 @@ class Search extends React.Component {
                 />
               </Grid.Column>
               <Grid.Column width={8}>
-                {dummy.results
+                {this.state.data
                   .filter((result) => result.price.amount > this.state.min)
                   .filter((result) => result.price.amount < this.state.max)
                   .filter((result) =>
