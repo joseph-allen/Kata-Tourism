@@ -18,6 +18,8 @@
 
 [Basic Login & Signup Page](https://deploy-preview-24--tourism-kata.netlify.app/)
 
+[Firebase Login](https://deploy-preview-25--tourism-kata.netlify.app/)
+
 # Installation
 
 Yarn version: 1.17.3
