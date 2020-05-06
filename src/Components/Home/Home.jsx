@@ -50,9 +50,11 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? "0.5em" : "1.5em",
       }}
     />
-    <Button size="huge" color="teal">
-      Search <Icon name="right arrow" />
-    </Button>
+    <Link to="/search">
+      <Button size="huge" color="teal">
+        Search <Icon name="right arrow" />
+      </Button>
+    </Link>
   </Container>
 );
 
