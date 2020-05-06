@@ -12,6 +12,8 @@
 
 [Adobe XD Results Page](https://xd.adobe.com/view/6a88bde5-7cdf-4ed3-580e-cd27a1e8a070-1cb9/?fullscreen&hints=off)
 
+[Project Wrap Up](https://docs.google.com/presentation/d/106EDljOOIknpWGHWGvPnodsx8iadYqFiTqYthz8R2Hg/edit?usp=sharing)
+
 # Deploy History
 
 [React Walking Skeleton](https://deploy-preview-20--tourism-kata.netlify.app/)
