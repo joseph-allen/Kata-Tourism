@@ -112,19 +112,6 @@ class DesktopContainer extends Component {
                       Log in
                     </Button>
                   </Link>
-                  <Link to="/signUp">
-                    <Button
-                      as="a"
-                      inverted={!fixed}
-                      primary={fixed}
-                      color="teal"
-                      style={{
-                        marginLeft: "0.5em",
-                      }}
-                    >
-                      Sign Up
-                    </Button>
-                  </Link>
                 </Menu.Item>
               </Container>
             </Menu>
@@ -183,9 +170,6 @@ class MobileContainer extends Component {
           <Link to="/login">
             <Menu.Item as="a"> Log in </Menu.Item>
           </Link>
-          <Link to="/signUp">
-            <Menu.Item as="a"> Sign Up </Menu.Item>
-          </Link>
         </Sidebar>
         <Sidebar.Pusher dimmed={sidebarOpened}>
           <Segment
@@ -202,20 +186,6 @@ class MobileContainer extends Component {
               <Menu inverted pointing secondary size="large">
                 <Menu.Item onClick={this.handleToggle}>
                   <Icon name="sidebar" />
-                </Menu.Item>
-                <Menu.Item position="right">
-                  <Button as="a" inverted>
-                    Log in
-                  </Button>
-                  <Button
-                    as="a"
-                    inverted
-                    style={{
-                      marginLeft: "0.5em",
-                    }}
-                  >
-                    Sign Up
-                  </Button>
                 </Menu.Item>
               </Menu>
             </Container>
