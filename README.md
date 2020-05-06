@@ -8,6 +8,8 @@
 
 [Nice Commit Messages](https://github.com/joseph-allen/Kata-Tourism/commits/master)
 
+[![API Documentation through Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/22415cd48a31356935e8)
+
 # Deploy History
 
 [React Walking Skeleton](https://deploy-preview-20--tourism-kata.netlify.app/)
