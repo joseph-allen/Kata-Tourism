@@ -16,7 +16,11 @@ const config = {
   appId: "1:417946319175:web:e19750c80219b29f263462",
   measurementId: "G-B0T0XZLTEW",
 };
-firebase.initializeApp(config);
+
+// no duplicates
+if (!firebase.apps.length) {
+  firebase.initializeApp(config);
+}
 
 // Configure FirebaseUI.
 const uiConfig = {

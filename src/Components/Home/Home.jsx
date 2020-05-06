@@ -96,14 +96,12 @@ class DesktopContainer extends Component {
               <Container>
                 <Link to="/">
                   <Menu.Item as="a" color="teal">
-                    {" "}
-                    Home{" "}
+                    Home
                   </Menu.Item>
                 </Link>
-                <Link to="/tours">
+                <Link to="/search">
                   <Menu.Item as="a" color="teal">
-                    {" "}
-                    Tours{" "}
+                    Tours
                   </Menu.Item>
                 </Link>
                 <Menu.Item position="right">
@@ -164,7 +162,7 @@ class MobileContainer extends Component {
               Home
             </Menu.Item>
           </Link>
-          <Link to="/tours">
+          <Link to="/search">
             <Menu.Item as="a"> Tours </Menu.Item>
           </Link>
           <Link to="/login">

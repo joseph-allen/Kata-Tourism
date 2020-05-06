@@ -8,6 +8,8 @@
 
 [Nice Commit Messages](https://github.com/joseph-allen/Kata-Tourism/commits/master)
 
+[![API Documentation through Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/22415cd48a31356935e8)
+
 [Adobe XD Results Page](https://xd.adobe.com/view/6a88bde5-7cdf-4ed3-580e-cd27a1e8a070-1cb9/?fullscreen&hints=off)
 
 # Deploy History
