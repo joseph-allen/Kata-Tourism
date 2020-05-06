@@ -21,7 +21,7 @@ const Tour = (props) => (
         </Card.Content>
         <Card.Content extra>
           <Icon name="user" />
-          {Math.floor(Math.random() * 50)} Attendees
+          {props.intro.charCodeAt(0);} Attendees
         </Card.Content>
       </Card>
     </Grid>
