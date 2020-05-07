@@ -86,3 +86,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 - Tour Page
 - Hide API Keys
 - Add Testing
+- Responsive Design
